@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <header [title]="title"></header>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="qaContent.length>0">
+    <div *ngFor="let qa of qaContent">
+      <div class="space">
+      <question-and-answers-content-card [obj]="qa"></question-and-answers-content-card>
+    </div>
+  </div>
+  </div>
+  <div *ngIf="qaContent.length==0">
+    <h4>No <b>{{title}}</b> Found</h4>
+  </div>
+</ion-content>

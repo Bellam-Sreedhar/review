@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <header [title]="title"></header>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div *ngIf="albumContent.length>0">
+    <div *ngFor="let album of albumContent">
+      <div class="space" >
+      <album-content-card [obj]="album"></album-content-card>
+    </div>
+    </div>
+  </div>
+  <div *ngIf="albumContent.length==0">
+    <h4>No <b>{{title}}</b> Found</h4>
+  </div>
+</ion-content>

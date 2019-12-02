@@ -1,0 +1,29 @@
+<ion-card class="card">
+  <ion-row class="row1">
+    <img class="image" *ngIf="obj.file" src="{{obj.file.fileUrl[0]}}" />
+  </ion-row>
+  <ion-row class="row2">
+    <limit-the-title [obj]="obj.title" [num]=20></limit-the-title>
+  </ion-row>
+  <ion-row class="row3">
+    <limit-the-text [obj]="obj.richContent" [num]=45></limit-the-text>
+  </ion-row>
+  <ion-row class="row4">
+    <ion-col col-3 *ngIf="obj.rating>=0">
+      <ion-icon name="star"></ion-icon>
+      {{obj.rating}}
+    </ion-col>
+    <ion-col col-3 *ngIf="obj.noOfViews>=0">
+      <ion-icon name="eye"></ion-icon>
+      {{obj.noOfViews}}
+    </ion-col>
+    <ion-col col-3 *ngIf="obj.noOfLikes>=0">
+      <ion-icon name="thumbs-up"></ion-icon>
+      {{obj.noOfLikes}}
+    </ion-col>
+    <ion-col col-3 *ngIf="obj.noOfComments>=0">
+      <ion-icon name="chatboxes"></ion-icon>
+      {{obj.noOfComments}}
+    </ion-col>
+  </ion-row>
+</ion-card>

@@ -1,0 +1,12 @@
+<ion-card class="card">
+  <ion-row class="row1">
+    <img class="image" *ngIf="obj.file && obj.file!=null" src="{{obj.file.fileUrl[0]}}" />
+  </ion-row>
+  <ion-row class="row2">
+      <limit-the-title [obj]="obj.title" [num]=20></limit-the-title>
+  </ion-row>
+  <ion-row class="row3">
+    <div class="content" innerHtml="{{obj.description}}">
+    </div>
+  </ion-row>
+</ion-card> 

@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <header [title]="title"></header>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="objArray.categoryObj.engagementModel !=(100 && 400 && 200 && 600)">
+    <h4>No List Found in <b>{{objArray.categoryObj.name}}</b></h4>
+  </div>
+</ion-content> 

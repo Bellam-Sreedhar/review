@@ -1,0 +1,51 @@
+<ion-card class="card">
+  <ion-row class="row1">
+    <ion-col col-5>
+      <img class="image" *ngIf="obj.coverPhoto" src="{{obj.coverPhoto.fileUrl[0]}}" />
+      <img class="image" *ngIf="obj.file" src="{{obj.file.fileUrl[0]}}" />
+    </ion-col>
+    <ion-col col-7>
+      <ion-row>
+        <limit-the-title [obj]="obj.title" [num]=20></limit-the-title>
+      </ion-row>
+      <ion-row class="content">
+        <ion-col col-2></ion-col>
+        <ion-col col-2 *ngIf="obj.mediaCount.photos>=0">
+          <ion-icon name="image"></ion-icon>
+          {{obj.mediaCount.photos}}
+        </ion-col>
+        <ion-col col-2 *ngIf="obj.mediaCount.videos>=0">
+          <ion-icon name="videocam"></ion-icon>
+          {{obj.mediaCount.videos}}
+        </ion-col>
+        <ion-col col-2 *ngIf="obj.mediaCount.audios>=0">
+          <ion-icon name="microphone"></ion-icon>
+          {{obj.mediaCount.audios}}
+        </ion-col>
+        <ion-col col-2 *ngIf="obj.mediaCount.documents>=0">
+          <ion-icon name="document"></ion-icon>
+          {{obj.mediaCount.documents}}
+        </ion-col>
+        <ion-col col-2></ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="row2">
+    <ion-col col-3 *ngIf="obj.rating>=0">
+      <ion-icon name="star"></ion-icon>
+      {{obj.rating}}
+    </ion-col>
+    <ion-col col-3 *ngIf="obj.noOfViews>=0">
+      <ion-icon name="eye"></ion-icon>
+      {{obj.noOfViews}}
+    </ion-col>
+    <ion-col col-3 *ngIf="obj.noOfLikes>=0">
+      <ion-icon name="thumbs-up"></ion-icon>
+      {{obj.noOfLikes}}
+    </ion-col>
+    <ion-col col-3 *ngIf="obj.noOfComments>=0">
+      <ion-icon name="chatboxes"></ion-icon>
+      {{obj.noOfComments}}
+    </ion-col>
+  </ion-row>
+</ion-card>

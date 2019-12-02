@@ -1,0 +1,60 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-row>
+        <ion-col col-4>
+          <div>
+            <img class="img" *ngIf="userDetails.file" src="{{userDetails.file.fileUrl[0]}}" />
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="userName">
+            {{userDetails.name}}
+          </div>
+        </ion-col>
+        <ion-col col-2>
+          <div class="logout">
+            <ion-icon menuClose name="log-out" (click)="logoutClick()"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+ </ion-header>
+ <ion-content>
+   
+    <ion-list *ngIf="categoriesList.length>0">
+        <button menuClose ion-item (click)="homeClick()">Home</button>
+      <div *ngFor="let categoryObj of categoriesList">
+        <div *ngIf="categoryObj.tags==null">
+          <button menuClose ion-item (click)="categoryClick(tagObj,categoryObj)">
+            {{categoryObj.name}}
+          </button>
+        </div> 
+        <div *ngIf="categoryObj.tags!=null">
+          <button ion-item (click)="categoryClick(tagObj,categoryObj)">
+            <ion-row>
+              <ion-col col-11>
+                {{categoryObj.name}} 
+              </ion-col>
+              <ion-col cool-1>
+                <ion-icon *ngIf="!categoryObj.clickable" name="arrow-dropdown"></ion-icon>
+                <ion-icon *ngIf="categoryObj.clickable" name="arrow-dropup"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </button>
+          <ion-list *ngIf="categoryObj.clickable">
+            <div *ngFor="let tagObj of categoryObj.tags">
+              <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col>
+                  <button menuClose ion-item (click)="categoryClick(tagObj,categoryObj)">{{tagObj}}</button>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-list>
+        </div>
+      </div>
+    </ion-list>
+ </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
