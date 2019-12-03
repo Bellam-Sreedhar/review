@@ -1,10 +1,10 @@
 <ion-row *ngIf="!searchBarShow">
   <ion-col col-1>
-    <div class="menu">
-      <button ion-button menuToggle>
+   
+      <button ion-button menuToggle class="menu">
         <ion-icon name="menu"></ion-icon>
       </button>
-    </div>
+ 
   </ion-col>
   <ion-col col-8>
     <div class="title">
@@ -12,13 +12,11 @@
     </div>
   </ion-col>
   <ion-col col-1>
-    <div class="activitiesMenu">
-      <button (click)="activitiesMenuClick()">
+      <button (click)="activitiesMenuClick()" class="activitiesMenu">
       <ion-icon name="grid"></ion-icon>
       <ion-icon *ngIf="!ativityShow" name="arrow-dropdown"></ion-icon>
       <ion-icon *ngIf="ativityShow" name="arrow-dropup"></ion-icon>
     </button>
-    </div>
   </ion-col>
   <ion-col col-1></ion-col>
   <ion-col col-1>

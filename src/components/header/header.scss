@@ -5,6 +5,7 @@ header {
 .menu{
 margin-top: 10px;
 background-color: color($colors, terinary);
+color: color($colors, light);
 }
 .search{
 margin-top: 0px;
@@ -17,6 +18,8 @@ margin-top: 10px;
     margin-top: 20px;
 }
 .activitiesMenu{
+    color: color($colors, light);
     margin-top: 10px;
+    background-color: color($colors, terinary);
 }
 }
