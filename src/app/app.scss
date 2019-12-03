@@ -1,5 +1,6 @@
 .logout{
 margin-top: 25px;
+color: color($colors, light);
 }
 .img{
     border-radius: 100%;
@@ -7,4 +8,8 @@ margin-top: 25px;
 }
 .userName{
     margin-top: 25px;
+}
+.userDetail{
+    background-color: color($colors, terinary);
+    color: color($colors, light);
 }

@@ -1,7 +1,7 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-row>
+      <ion-row class="userDetail">
         <ion-col col-4>
           <div>
             <img class="img" *ngIf="userDetails.file" src="{{userDetails.file.fileUrl[0]}}" />
@@ -21,7 +21,7 @@
     </ion-toolbar>
  </ion-header>
  <ion-content>
-   
+
     <ion-list *ngIf="categoriesList.length>0">
         <button menuClose ion-item (click)="homeClick()">Home</button>
       <div *ngFor="let categoryObj of categoriesList">
@@ -36,7 +36,7 @@
               <ion-col col-11>
                 {{categoryObj.name}} 
               </ion-col>
-              <ion-col cool-1>
+              <ion-col col-1>
                 <ion-icon *ngIf="!categoryObj.clickable" name="arrow-dropdown"></ion-icon>
                 <ion-icon *ngIf="categoryObj.clickable" name="arrow-dropup"></ion-icon>
               </ion-col>
