@@ -1,7 +1,8 @@
 header {
     background-color: color($colors, terinary);
     text-align: center;
-    color: color($colors, light);
+    width: 100%;
+    height: 100%; 
 .menu{
 margin-top: 10px;
 background-color: color($colors, terinary);
@@ -12,14 +13,18 @@ margin-top: 0px;
 }
 .title{
 margin-top: 10px;
-
+color: color($colors, light);
 }
 .searchIcon{
+    color: color($colors, light);
     margin-top: 20px;
 }
 .activitiesMenu{
     color: color($colors, light);
     margin-top: 10px;
     background-color: color($colors, terinary);
+}
+.navbar{
+    padding: 0px;
 }
 }
