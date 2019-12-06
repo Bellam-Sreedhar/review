@@ -4,15 +4,15 @@
   </ion-navbar>
 </ion-header> 
 <ion-content padding>
-  <div *ngFor="let menu of menus">
+  <div *ngFor="let menu of menuLinks">
     <ion-row>
-      <button class="menu" color="terinary" ion-button>{{menu}}</button>
+      <button class="menu" color="terinary" ion-button>{{menu.menu}}</button>
     </ion-row>
   </div>
     
-  <ion-list *ngFor="let link of links">
+  <ion-list *ngFor="let link of menuLinks">
     <a ion-item href="link1">
-      <div class="link"><u>{{link}}</u></div>
+      <div class="link"><u>{{link.link}}</u></div>
     </a>
   </ion-list>
 </ion-content>

@@ -1,6 +1,6 @@
 <ion-card class="card">
   <ion-row class="row1">
-    <ion-col col-5>
+    <ion-col col-5 class="col11">
       <img class="image" *ngIf="obj.coverPhoto" src="{{obj.coverPhoto.fileUrl[0]}}" />
       <img class="image" *ngIf="obj.file" src="{{obj.file.fileUrl[0]}}" />
     </ion-col>
@@ -30,6 +30,7 @@
       </ion-row>
     </ion-col>
   </ion-row>
+  <hr class="hr"/>
   <ion-row class="row2">
     <ion-col col-3 *ngIf="obj.rating>=0">
       <ion-icon name="star"></ion-icon>

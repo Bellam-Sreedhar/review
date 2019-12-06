@@ -1,8 +1,8 @@
-  <ion-row *ngIf="!searchBarShow">
+<ion-row *ngIf="!searchBarShow">
   <ion-col col-1>
-      <button ion-button menuToggle class="menu">
-        <ion-icon name="menu"></ion-icon>
-      </button>
+    <button ion-button menuToggle class="toggleMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
   </ion-col>
   <ion-col col-8>
     <div class="title">
@@ -10,7 +10,7 @@
     </div>
   </ion-col>
   <ion-col col-1>
-      <button (click)="activitiesMenuClick()" class="activitiesMenu">
+    <button (click)="activitiesMenuClick()" class="activitiesMenu">
       <ion-icon name="grid"></ion-icon>
       <ion-icon *ngIf="!ativityShow" name="arrow-dropdown"></ion-icon>
       <ion-icon *ngIf="ativityShow" name="arrow-dropup"></ion-icon>
@@ -28,7 +28,7 @@
 </ion-row>-->
 <ion-row *ngIf="searchBarShow">
   <ion-col col-12>
-    <div class="search">
+    <div class="searchBar">
       <ion-searchbar [showCancelButton]="true" (keyup.enter)="doSearch()" [(ngModel)]="searchKey"
         (ionCancel)="onCancel($event)"></ion-searchbar>
     </div>

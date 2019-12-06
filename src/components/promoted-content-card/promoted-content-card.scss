@@ -1,9 +1,12 @@
 promoted-content-card {
     .image{
-        height: 150px;
+        height: 240px;
         width: 100%;
     }
     .card{
-        min-height: 100px;
+        height: 240px;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0px;
     }
 }

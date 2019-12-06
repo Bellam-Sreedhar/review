@@ -2,6 +2,10 @@
 margin-top: 25px;
 color: color($colors, light);
 }
+.toolbar{
+    background-color: color($colors, secondary);
+    padding: 0px;
+}
 .img{
     border-radius: 100%;
     

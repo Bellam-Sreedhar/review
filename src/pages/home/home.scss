@@ -1,9 +1,8 @@
 page-home {
-.featured{
-    margin-top: 15px;
-    text-align: center; 
-}
-.navbar{
-    padding: 0px;
+.body{
+    background-color:color($colors,bgbody);
+    .featured{
+        text-align: center;  
+  }
 }
 }

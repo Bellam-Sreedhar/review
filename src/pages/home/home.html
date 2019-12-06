@@ -1,34 +1,34 @@
 <ion-header>
-  <ion-navbar class="navbar">
+  <ion-navbar>
     <header [title]="title"></header>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content class="body">
   <ion-row>
-    <ion-col col-12>
+    <ion-col col-12 no-padding>
       <div *ngFor="let obj of promotedContent">
         <promoted-content-card [obj]="obj"></promoted-content-card>
       </div>
-    </ion-col> 
+    </ion-col>
   </ion-row>
   <div class="featured">
-  <h6><b>FEATURED CONTENT</b></h6>
-</div>
+    <h6><b>FEATURED CONTENT</b></h6>
+  </div>
   <ion-row>
     <ion-col col-12>
       <div class="featured" *ngFor="let obj of featuredContent">
-          <div *ngIf="obj.engagementModelId==100">
-            <article-content-card [obj]="obj"></article-content-card>
-          </div>
-          <div *ngIf="obj.engagementModelId==400">
-            <album-content-card [obj]="obj"></album-content-card>
-          </div>
-          <div *ngIf="obj.engagementModelId==200">
-            <poll-content-card [obj]="obj"></poll-content-card>
-          </div>
-          <div *ngIf="obj.engagementModelId==600">
-            <question-and-answers-content-card [obj]="obj"></question-and-answers-content-card>
-          </div>
+        <div *ngIf="obj.engagementModelId==100">
+          <article-content-card [obj]="obj"></article-content-card>
+        </div>
+        <div *ngIf="obj.engagementModelId==400">
+          <album-content-card [obj]="obj"></album-content-card>
+        </div>
+        <div *ngIf="obj.engagementModelId==200">
+          <poll-content-card [obj]="obj"></poll-content-card>
+        </div>
+        <div *ngIf="obj.engagementModelId==600">
+          <question-and-answers-content-card [obj]="obj"></question-and-answers-content-card>
+        </div>
       </div>
     </ion-col>
   </ion-row>
